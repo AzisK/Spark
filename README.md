@@ -30,3 +30,12 @@ and submit
 cd /usr/bin/spark-3.1.1-bin-hadoop3.2/bin
 bash spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.1.1 /opt/notebooks/spark2kafka.py
 ```
+
+## Listen to a topic
+
+```bash
+docker-compose it broker bash
+```
+```bash
+bash /bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic topic-demo --from-beginning
+```
